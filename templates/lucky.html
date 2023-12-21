@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Feeling lucky?</title>
+    <link rel = "stylesheet", type = "text/css", href = "{{ url_for('static', filename = 'styles/style.css') }}">
+</head>
+<body>
+<center>
+
+    <h1>Thought you were feeling lucky?</h1>
+    <h2>Well, you're not.</h2>
+
+    <h3>enjoy whatever the computer threw up :)</h3>
+
+    <div class = "randMovies">
+        <p>{{ movies }}</p>
+    </div>
+
+        <nav class = "back">
+            <ul class = "goBack">
+                <li><a href="/dropdown">Head back to base</a></li>
+            </ul>
+        </nav>
+
+</center>
+</body>
+</html>

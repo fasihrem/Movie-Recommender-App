@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Who am I?</title>
+    <link rel = "stylesheet", type = "text/css", href = "{{ url_for('static', filename = 'styles/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/">
+            <img src="{{ url_for('static', filename = 'image/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </header>
+
+	<div class="container">
+        <center>
+		<h1>About Us</h1>
+            <img src="{{ url_for('static', filename = 'image/edit.jpg') }}" alt="Literally me." height="150px">
+            <p>Cultivated from the inner demons at the seventh basement of Hell, residing in the palm of Asmodeus gathering dust. The demons were summoned by the dark lord himself, but this Dark Lord is en evils hand ahead of Volemort himself. And since Voletort never was able to kill Harry Potter successfully, maybe this demon may have better luck. </p>
+		    <p>Made by Fasih Ur Rehman from scratch. This code was written by Fasih himself, with some help from ChatGPT and StackOverflow. Other than that, all design ideas and creative liberty is from Fasih. (Yes I copied the design from Netflix, and Yes, I am talking about myself in third-person perspective sue me.</p>
+            <p>Linking with ML Algorithm has not been done yet since I was told by multiple people that linking was not part of this Phase. However, linking could have been done in this phase. If you visit 'app.py' you will see the initial stages of setting up the files and creating the class required for the ML Algo. Please do not cut marks for what other people have told me time and time again. I am merely a human who is almost always nearly deathly ill I would appreciate some sort of kindness.</p>
+	    </center>
+    </div>
+
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/dropdown">Recommender</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
+
+    <footer>
+      <p>2023 Fasih&Site. All rights reserved. ™</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Personal Movie Genie!</title>
+    <link rel = "stylesheet", type = "text/css", href = "{{ url_for('static', filename = 'styles/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename = 'image/logo.png') }}" alt="Logo">
+        </div>
+    </header>
+
+	<h1>Welcome to the Movie Recommendation System</h1>
+
+{#    <center>#}
+{#        <div class = header-container>#}
+{#            <h3 style="float:left;">created by </h3>#}
+{#            <h2 style="float:right;"> Fasih Ur Rehman, 21I-1705</h2>#}
+{#            <hr style="clear:both;"/>#}
+{#        </div>#}
+{#    </center>#}
+
+    <CENTER>
+    <h2>Fasih Ur Rehman, 21I-1705</h2>
+	</CENTER>
+
+    <div class = "randMovies">
+		<!-- Add code here to display a slideshow of random movies -->
+		{% for movie in movies %}
+			<p>{{ movie }}</p>
+		{% endfor %}
+	</div>
+
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/dropdown">Recommender</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+	</nav>
+
+    <footer>
+      <p>2023 Fasih&Site. All rights reserved. ™</p>
+    </footer>
+
+</body>
+</html>

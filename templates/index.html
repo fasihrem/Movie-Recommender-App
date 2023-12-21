@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose a Movie!</title>
+    <link rel = "stylesheet", type = "text/css", href = "{{ url_for('static', filename = 'styles/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="/">
+            <img src="{{ url_for('static', filename = 'image/logo.png') }}" alt="Logo">
+            </a>
+        </div>
+    </header>
+
+	<h1>Select a movie from the dropdown list</h1>
+	<div>
+		<form action="{{ url_for('selected_row') }}" method="POST">
+			<select name="dropdown">
+				{% for row in rows %}
+					<option value="{{ row[0] }}">{{ row[0] }}</option>
+				{% endfor %}
+			</select>
+			<button class = "netflix-button" type="submit">Submit</button>
+		</form>
+	</div>
+
+    <br><br>
+
+    <form action="{{ url_for('feelingLucky') }}" method = 'GET'>
+        <button class = 'netflix-button' type = 'submit' style="--c:#dc2c2c">I'm feeling lucky!</button>
+    </form>
+
+	<nav>
+		<ul>
+			<li><a href="/">Home</a></li>
+			<li><a href="/dropdown">Recommender</a></li>
+			<li><a href="/about">About</a></li>
+		</ul>
+	</nav>
+
+<footer>
+  <p>2023 Fasih&Site. All rights reserved. ™</p>
+</footer>
+
+</body>
+</html>
